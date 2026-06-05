@@ -28,3 +28,41 @@ console.log(plane[3]); // 0
 - trim()-to remove whitespaces at start and end
 - replace("from","to")-replaces first match,replaceAll() replaces every match
 - .includes(),.startsWith(),.endsWith()-checks and returns boolean value
+
+# Important methods
+- split()-breaks a string into array
+eg-const name = "Nischal Shetty";
+
+console.log(name.split(" "));//["Nischal", "Shetty"]
+
+- join()-opposite of split as it joins array into string
+  const arr = [
+  "Mr.",
+  "Nischal",
+  "SHETTY"
+];
+
+console.log(arr.join(" "));//Mr. Nischal SHETTY
+
+- split+join-
+const str = "hello world";
+
+const arr = str.split(" ");
+
+const result = arr.join("-");
+
+console.log(result);//hello-world
+
+- padStart()-adds character to the beginning
+const msg =
+  "Go to gate 23";
+console.log(
+  msg.padStart(25, "+")
+);//++++++++++++Go to gate 23 ->curr length=13,desired length=25,25-13=12 so 12 plus signs are needed
+
+- padEnd()
+- repeat()-repeats string multiple times
+  console.log(
+  "Hi ".repeat(3)
+);//Hi Hi Hi
+
