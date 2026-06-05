@@ -22,4 +22,9 @@ console.log(plane[3]); // 0
 # Javascript boxing-
 "Hello" if we put in js it automatically considers it as String(Hello) and this object contains methods
 
-# 
+# Most used string methods
+- toLowerCase()
+- toUpperCase()
+- trim()-to remove whitespaces at start and end
+- replace("from","to")-replaces first match,replaceAll() replaces every match
+- .includes(),.startsWith(),.endsWith()-checks and returns boolean value
