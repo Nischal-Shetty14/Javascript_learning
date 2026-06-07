@@ -25,3 +25,39 @@ console.log(jonas.name);//Mr. Jonas
 
 ** in object it changes coz js copies the reference and not the entire object,so changing obj2 when obj2=obj1 it also changes obj1 ** 
 ** javascript is pass by value,even if object is pass by reference **
+
+# First class function
+A language has first-class functions if functions can be treated like normal values.
+Functions are values so:
+- Functions can be stored in variables
+- in objects
+- passed as arguments
+- returned from functions
+
+# Higher order function
+Receives function as argument or returns function
+- eg-function greet() {
+  console.log("Hello");
+}
+
+button.addEventListener("click", greet);//HERE addEventListener is higher order function and greet is callback function
+- function multiplier(x) {
+  return function(y) {
+    return x * y;
+  };
+
+# Basically
+First-Class Functions
+
+A JavaScript feature where functions are treated as values and can be stored, passed, and returned.
+
+Callback Function
+
+A function passed as an argument to another function.
+
+Higher-Order Function
+
+A function that either:
+
+accepts another function as an argument, or
+returns a function.
