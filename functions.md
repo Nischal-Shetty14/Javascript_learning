@@ -61,3 +61,20 @@ A function that either:
 
 accepts another function as an argument, or
 returns a function.
+
+#EXAMPLE
+function upperFirstWord(str) {
+  const [first, ...others] = str.split(" ");
+
+  return [first.toUpperCase(), ...others].join(" ");
+}
+upperFirstWord("javascript is best")//"JAVASCRIPT is best"
+
+function transformer(str, fn) {
+  console.log("Original:", str);
+  console.log("Transformed:", fn(str));
+}
+transformer("JavaScript is best", upperFirstWord);
+//JAVASCRIPT is best
+** No parenthesis while calling function like upperFirstWord() coz then it will execute then but we want it to execute later **
+** When function called in another function its called callback function like upperFirstWord here **
