@@ -78,3 +78,4 @@ transformer("JavaScript is best", upperFirstWord);
 //JAVASCRIPT is best
 ** No parenthesis while calling function like upperFirstWord() coz then it will execute then but we want it to execute later **
 ** When function called in another function its called callback function like upperFirstWord here **
+callback function is basically calling it back
