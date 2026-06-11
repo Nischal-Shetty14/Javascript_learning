@@ -18,7 +18,8 @@ Js remembers greeting value , so returned functions remember variables from the 
     console.log(`${greeting} ${name}`);
 
 # This in functions
-  const lufthansa = {
+```
+const lufthansa = {
     airline: "Lufthansa",
     iataCode: "LH",
     bookings: [],
@@ -33,6 +34,7 @@ Js remembers greeting value , so returned functions remember variables from the 
         });
     }
 };
+``` 
 here this==lufthansa we know
 lufthansa.book(239, "Nischal");
 lufthansa.book(635, "John");
@@ -46,13 +48,16 @@ but here also we can see this refers to lufthansa and we cant use elsewhere
 therefore:-
 - call()-
   functionName.call(thisValue, arg1, arg2, ...)
+```
   book.call(
     eurowings,
     23,
     "Sarah"
 );
+```
 So now "this" is eurowings and it can be used with eurowings value->Sarah booked a seat on eurowings flight ...
 - apply()-same things as call but used array
+```
   const flightData = [
     583,
     "George"
@@ -62,8 +67,11 @@ book.apply(
     swiss,
     flightData
 );
+```
 - spread operator-New version
+```
 book.call(
     swiss,
     ...flightData
 );
+```
