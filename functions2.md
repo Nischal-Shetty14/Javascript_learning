@@ -17,18 +17,17 @@ Js remembers greeting value , so returned functions remember variables from the 
   name =>
     console.log(`${greeting} ${name}`);
 
-  # This in functions
+# This in functions
   const lufthansa = {
     airline: "Lufthansa",
     iataCode: "LH",
     bookings: [],
 
-    book(flightNum, passengerName) {
+  book(flightNum, passengerName) {
         console.log(
-            `${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+          `${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
         );
-
-        this.bookings.push({
+  this.bookings.push({
             flight: `${this.iataCode}${flightNum}`,
             passenger: passengerName
         });
