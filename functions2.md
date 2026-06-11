@@ -75,3 +75,51 @@ book.call(
     ...flightData
 );
 ```
+- bind-Unlike others it doesnt execute immediately and instead returns another function
+Suppose we want a version where the function is binded to an object
+```
+const bookEW = book.bind(eurowings);
+->same as,
+  const bookEW = function(flightNum, name) {
+  book.call(eurowings, flightNum, name);
+}
+```
+```
+bookEW(23, "Steven");
+o/p-Steven booked a seat on Eurowings flight EW23
+```
+  - Partial Application -pre filling some arguments of function
+ ```
+  const bookEW23 =
+  book.bind(eurowings, 23);
+  Only needs,bookEW23("Jonas");
+  ```
+  - Event listeners-
+  ```
+const lufthansa = {
+  planes: 300,
+
+  buyPlane() {
+    this.planes++;
+    console.log(this.planes);
+  }
+};
+
+Call-
+document
+  .querySelector(".buy")
+  .addEventListener(
+    "click",
+    lufthansa.buyPlane
+  );
+Here NaN comes because this refers to the button and not to Lufthansa and it becomes button.planes++ which is wrong
+```
+Solution-
+```
+document
+  .querySelector(".buy")
+  .addEventListener(
+    "click",
+    lufthansa.buyPlane.bind(lufthansa)
+  );
+```
